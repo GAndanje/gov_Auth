@@ -1,5 +1,5 @@
+import BaseModel from "src/modules/app/entities/base.model.entity";
 import { Column, Entity } from "typeorm";
-import BaseModel from "./base.model.entity";
 
 @Entity()
 export class User extends BaseModel {

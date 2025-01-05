@@ -1,8 +1,8 @@
 import { Module } from '@nestjs/common';
 import { SystemsService } from './systems.service';
 import { SystemsController } from './systems.controller';
-import { System } from './entities/system.entity';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { System } from './entities/system.entity';
 
 @Module({
   imports: [

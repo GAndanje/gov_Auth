@@ -1,8 +1,8 @@
 import { Column, Entity } from "typeorm";
-import BaseModel from "./base.model.entity";
+import BaseModel from "../../app/entities/base.model.entity";
 
 @Entity()
-export class Systems extends BaseModel {
+export class System extends BaseModel {
     @Column()
     SystemName: string
 

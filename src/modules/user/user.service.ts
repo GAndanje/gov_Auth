@@ -8,15 +8,15 @@ import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import * as argon2 from 'argon2';
 import { v4 as uuidV4 } from 'uuid';
+import { User as UserEntity } from './entities/user.entity';
 
-import {User as UserEntity} from '../entities/user.entity'
 
 @Injectable()
 export class UserService {
   constructor(
     @InjectRepository(UserEntity)
     private readonly userRepository: Repository<UserEntity>,
-  ) {}
+  ) { }
 
   async create(
     createUserDto: CreateUserDto,
