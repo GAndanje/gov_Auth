@@ -5,12 +5,10 @@ import {
 import { CreateUserDto } from './dto/create-user.dto';
 import { UpdateUserDto } from './dto/update-user.dto';
 import { InjectRepository } from '@nestjs/typeorm';
-import { Repository } from 'typeorm';
+import { Repository, serialize } from 'typeorm';
 import * as argon2 from 'argon2';
 import { v4 as uuidV4 } from 'uuid';
 import { User as UserEntity } from './entities/user.entity';
-
-
 @Injectable()
 export class UserService {
   constructor(
